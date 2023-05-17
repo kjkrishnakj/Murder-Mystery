@@ -1,47 +1,36 @@
-.gradient-background {
-  background: linear-gradient(to bottom, #4d4d4d, #999999);
-}
-
-.logo {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.brand-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #f2f2f2;
-}
-
 #Title {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.card-title {
-  font-size: 24px;
+#Title div {
+  background-color: #fff;
+  color: #000;
   font-weight: bold;
-  color: #333;
-}
-
-.card-text {
-  font-size: 18px;
-  color: #666;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
 }
 
 .choices {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn-outline-dark {
-  color: #333;
-  border-color: #333;
+  color: #000;
+  border-color: #000;
+  font-weight: bold;
 }
 
 .btn-outline-dark:hover {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
+  font-weight: bold;
 }
+

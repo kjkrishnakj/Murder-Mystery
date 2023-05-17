@@ -1,38 +1,47 @@
-.card {
-  margin: 20px;
+.gradient-background {
+  background: linear-gradient(to bottom, #4d4d4d, #999999);
 }
 
-h5 {
-  padding: 5%;
+.logo {
+  height: 50px;
+  margin-right: 10px;
 }
 
-p {
-  padding: 3% 5%;
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f2f2f2;
 }
-
-/* Title */
 
 #Title {
-  background-color: #0C134F;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-/* Stage-1 */
-
-#Stage-1 {
-  padding: 10% 15% 0;
-  padding: 15% 5%;
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Stage-2 */
-
-#Stage-2 {
-  padding: 10% 15%;
+.card-text {
+  font-size: 18px;
+  color: #666;
 }
 
 .choices {
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.gradient-background {
-  background: linear-gradient(to bottom right, #0C134F, #5C469C);
+.btn-outline-dark {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-outline-dark:hover {
+  background-color: #333;
+  color: #fff;
 }

@@ -1,153 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murder Mystery Website</title>
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="stylesheet" href="styles.css">
 
-  <body class="gradient-background">
+</head>
+
+<body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="data:image/jpeg;base64,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" alt="Logo" class="logo" />
-          <span class="brand-name">Murder Mystery</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div>
+
+
+
+
+
+    </div>
 
     <!-- Title -->
+
     <div id="Title">
-      <div class="container">
         <div class="row">
-          <div class="col">
-            <h1 class="text-center text-white">Unravel the Secrets and Solve the Murder in an Interactive Online Mystery Experience.</h1>
-          </div>
+            <div class="col-12">
+                <h1>Murder Mystrey</h1>
+            </div>
+            <div class="col">
+                <img src="FYI.jpg" width="200px" alt="" style="border-radius: 100%;">
+            </div>
+
+            <div class="col">
+                <h4>Unravel the Secrets and Solve the Murder in an Interactive Online Mystery Experience.</h4>
+            </div>
+
         </div>
-      </div>
     </div>
+
+    <hr>
 
     <!-- Stage 1 - Quiz -->
     <div id="Stage-1">
-      <div class="container">
-        <div class="card">
-          <div class="choices card-body">
-            <h5 class="card-title">Quiz-1</h5>
-            <p class="card-text">
-              "Welcome to the Murder Mystery Quiz! Test your detective skills and see if you can solve the mysterious
-              crime. Choose your answers carefully, as the fate of the investigation depends on your choices. Good
-              luck!"
-            </p>
-            <p class="card-text">Click the button below to take the quiz:</p>
-            <a href="https://quiz-link.com" class="btn btn-outline-dark">Take Quiz</a>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Image</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="c1 card text-light">
+                        <img class="card-img-top" src="https://images.alphacoders.com/727/727330.jpg">
+                        <div class="choices card-body">
+                            <h5 class="card-title">Quiz-1</h5>
+                            <p class="card-text"> "Welcome to the Murder Mystery Quiz! Test your detective skills
+                                and see if you can solve the mysterious crime. Choose your answers carefully,
+                                as the fate of the investigation depends on your choices. Good luck!"</p>
+                            <p class="card-text">Click the button below to take the quiz:</p>
+                            <a href="https://quiz-link.com" class="btn btn-outline-light">Take Quiz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+
+    <hr>
 
     <!-- Stage 2 - Choices -->
     <div id="Stage-2">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="choices card-body">
-                <h5 class="card-title">"The Haunted Mansion"</h5>
-                <p class="card-text">
-                  "Explore the eerie corridors of the haunted mansion, where the murder took place. Search for clues,
-                  uncover hidden secrets, and interact with suspicious characters to unravel the truth behind the
-                  crime."
-                </p>
-                <a href="https://choice1-link.com" class="btn btn-outline-dark">Choose this option</a>
-              </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-light">
+                        <div class="choices card-body">
+                            <h5 class="card-title">"The Haunted Mansion"</h5>
+                            <p class="card-text">"Explore the eerie corridors of the haunted mansion,
+                                where the murder took place. Search for clues, uncover hidden secrets,
+                                and interact with suspicious characters to unravel the truth behind the
+                                crime."</p>
+                            <a href="https://choice1-link.com" class="btn btn-outline-light">Explore Choice 1</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-light">
+                        <div class="choices card-body">
+                            <h5 class="card-title">"The Detective's Office"</h5>
+                            <p class="card-text">"Step into the shoes of a detective in your own virtual office.
+                                Examine case files, review witness statements, and analyze evidence to piece together
+                                the puzzle.
+                                Can you identify the culprit and bring them to justice?"</p>
+                            <a href="https://choice2-link.com" class="btn btn-outline-light">Explore Choice 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-light">
+                        <div class="choices card-body">
+                            <h5 class="card-title">"The Crime Scene Investigation"</h5>
+                            <p class="card-text"> "Become a forensic expert and visit the crime scene. Collect
+                                fingerprints,
+                                analyze blood samples, and reconstruct the events of that fateful night.
+                                Use your scientific expertise to find the missing pieces of the puzzle."</p>
+                            <a href="https://choice3-link.com" class="btn btn-outline-light">Explore Choice 3</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="choices card-body">
-                <h5 class="card-title">"The Secret Lab"</h5>
-                <p class="card-text">
-                  "Investigate the mysterious laboratory of the victim, where cutting-edge research was being conducted.
-                  Piece together evidence, interrogate suspects, and solve puzzles to uncover the dark motives behind
-                  the murder."
-                </p>
-                <a href="https://choice2-link.com" class="btn btn-outline-dark">Choose this option</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="choices card-body">
-                <h5 class="card-title">"The Crime Scene"</h5>
-                <p class="card-text">
-                  "Examine the crime scene where the body was found. Use your forensic skills to collect evidence,
-                  analyze clues, and interview witnesses to piece together what happened on the night of the murder."
-                </p>
-                <a href="https://choice3-link.com" class="btn btn-outline-dark">Choose this option</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <!-- Stage 3 - Conclusion -->
-    <div id="Stage-3">
-      <div class="container">
-        <div class="card">
-          <div class="conclusion card-body">
-            <h5 class="card-title">Conclusion</h5>
-            <p class="card-text">
-              "Congratulations, you have successfully solved the murder mystery! Thanks for playing and we hope you
-              enjoyed this interactive online experience. Stay tuned for more mysteries and adventures."
-            </p>
-            <a href="#" class="btn btn-outline-dark">Back to Home</a>
-          </div>
-        </div>
-      </div>
-    </div>
+</body>
 
-  </body>
 </html>

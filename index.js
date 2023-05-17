@@ -1,14 +1,36 @@
-// Code to validate team code and start the quiz
+// Pop-up screen
+const popup = document.getElementById("popup");
 
-const form = document.querySelector('form');
-const input = document.querySelector('#team-code');
+// Open the pop-up screen when the page loads
+window.onload = function () {
+  popup.style.display = "block";
+};
 
-form.addEventListener('submit', function (event) {
+// Close the pop-up screen when the user clicks the close button
+function closePopup() {
+  popup.style.display = "none";
+}
+
+// Handle form submission
+const form = document.getElementById("team-form");
+form.addEventListener("submit", function (event) {
   event.preventDefault();
-  const teamCode = input.value.trim();
-  if (teamCode.length !== 6) {
-    alert('Invalid team code. Please enter a 6-digit code.');
-  } else {
-    // Code to start the quiz and other stages
-  }
+
+  // Get the team code and name from the form
+  const teamCode = document.getElementById("team-code").value;
+  const teamName = document.getElementById("team-name").value;
+
+  // Store the team code and name in MongoDB
+  fetch("/store-team", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ teamCode, teamName }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // Close the pop-up screen
+      closePopup();
+    })
+    .catch((error) => console.error(error));
 });

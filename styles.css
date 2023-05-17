@@ -2,36 +2,37 @@
   margin: 20px;
 }
 
-h5{
+h5 {
   padding: 5%;
 }
 
-p{
+p {
   padding: 3% 5%;
 }
 
 /* Title */
 
-#Title{
+#Title {
   background-color: #0C134F;
 }
 
 /* Stage-1 */
 
-#Stage-1{
+#Stage-1 {
   padding: 10% 15% 0;
   padding: 15% 5%;
 }
 
-
-
 /* Stage-2 */
 
-#Stage-2{
+#Stage-2 {
   padding: 10% 15%;
-  background-color: #5C469C;
 }
 
-.choices{
+.choices {
   text-align: center;
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom right, #0C134F, #5C469C);
 }
